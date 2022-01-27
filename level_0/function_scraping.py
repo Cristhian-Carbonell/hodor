@@ -33,6 +33,11 @@ def get_form_details(form):
 
 if __name__ == "__main__":
     import sys
+    if len(sys.argv) < 2:
+        print("Enter the URL to vote: ")
+        print("Example")
+        print("python3 votes.py http://www.google.com")
+        quit()
     url = sys.argv[1]
     forms = get_all_forms(url)
     for i, form in enumerate(forms, start=1):
